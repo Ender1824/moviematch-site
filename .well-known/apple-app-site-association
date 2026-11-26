@@ -1,0 +1,10 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["3PARMB2466.com.harrisonkiser.moviematch"],
+        "components": [{ "/": "/join/*", "comment": "Screening invites open in the app" }]
+      }
+    ]
+  }
+}

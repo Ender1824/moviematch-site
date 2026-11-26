@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>You're invited to a MovieMatch screening</title>
+<meta name="description" content="Join the screening and swipe movies together. When everyone's in, it's showtime.">
+<!-- iMessage builds the link bubble from these tags. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MovieMatch">
+<meta property="og:title" content="You're invited to movie night 🎟️">
+<meta property="og:description" content="Join my MovieMatch screening. Swipe together, and when everyone's in, it's showtime.">
+<meta property="og:image" content="https://ender1824.github.io/moviematch-site/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0608">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+  <div class="marquee">
+    <div class="kicker">YOU'RE INVITED</div>
+    <h1>Movie night</h1>
+    <div class="code" id="code" aria-label="Screening code">····</div>
+    <div class="kicker" style="margin-top:8px">SCREENING CODE</div>
+  </div>
+  <p class="lead">Open MovieMatch to join the screening. The app is coming soon to the App Store.</p>
+  <a class="btn primary" id="open" href="moviematch://">Open in MovieMatch</a>
+  <span class="btn soon" role="note">Coming soon to the App Store</span>
+</main>
+<footer>MovieMatch · works with your own Plex Media Server</footer>
+<script>
+  // /join/ABCD (or /join/?code=ABCD): show the code and point the button at the app.
+  (function () {
+    // Works at the site root or under a sub-path (GitHub Pages: /moviematch-site/join/...).
+    var parts = location.pathname.split("/").filter(Boolean);
+    var j = parts.indexOf("join");
+    var fromPath = j >= 0 && parts[j + 1] && parts[j + 1] !== "index.html" ? parts[j + 1] : "";
+    var raw = (fromPath || new URLSearchParams(location.search).get("code") || "").toUpperCase();
+    if (!/^[A-Z]{4}$/.test(raw)) return;
+    var el = document.getElementById("code");
+    el.textContent = raw;
+    el.setAttribute("aria-label", "Screening code " + raw.split("").join(" "));
+    document.getElementById("open").href = "moviematch://join/" + raw;
+    document.title = "Join screening " + raw + " on MovieMatch";
+  })();
+</script>
+</body>
+</html>

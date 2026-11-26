@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MovieMatch</title>
+<script>
+  // Static hosts without rewrites (GitHub Pages): turn /…/join/ABCD into /…/join/?code=ABCD,
+  // and send anything else to the home page.
+  (function () {
+    var p = location.pathname, i = p.indexOf("/join/");
+    if (i >= 0) {
+      var code = p.slice(i + 6).split("/")[0];
+      location.replace(p.slice(0, i) + "/join/?code=" + encodeURIComponent(code));
+    } else {
+      location.replace("/moviematch-site/");
+    }
+  })();
+</script>
+</head>
+<body style="background:#0a0608"></body>
+</html>
