@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support · MovieMatch</title>
+<meta name="description" content="Help with MovieMatch: connecting Plex or Jellyfin, watching away from home, and group screenings with SharePlay.">
+<meta name="theme-color" content="#0a0608">
+<link rel="icon" href="../icon.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main class="doc">
+  <nav class="top"><a href="../">← MovieMatch</a></nav>
+  <h1>Support</h1>
+  <p class="updated">Help with movie night</p>
+
+  <h2>Getting started</h2>
+  <details open><summary>How does MovieMatch work?</summary>
+    <p>Everyone in the screening swipes the same lineup of movies from your library. Tap <strong>I'm in</strong> or <strong>Skip</strong>. When every person says I'm in to the same movie, it's a match, and that's tonight's film.</p></details>
+  <details><summary>Connect Plex</summary>
+    <p>Open Settings → <strong>Sign in with Plex</strong>, approve in the browser, then pick your server. You can also enter a server address and token by hand under "Manual setup".</p></details>
+  <details><summary>Connect Jellyfin</summary>
+    <p>Open Settings → <strong>Jellyfin</strong>, enter your server address (for example <code>http://192.168.1.20:8096</code> or your public address), your username and password. Your password is only used to sign in and isn't stored; the app keeps an access token in the Keychain.</p></details>
+  <details><summary>Can I try it without a server?</summary>
+    <p>Yes. Without a server, MovieMatch uses a set of demo movies with simulated friends so you can see how it works.</p></details>
+
+  <h2>Away from home</h2>
+  <details><summary>It works at home but not on cellular</summary>
+    <p>MovieMatch talks to your own media server, so the server must be reachable from outside your home. For Plex, turn on <strong>Remote Access</strong> in your server's settings. MovieMatch automatically switches between your server's home and remote addresses. For Jellyfin, use an address that works outside your network, such as a reverse proxy or VPN.</p></details>
+
+  <h2>Group screenings</h2>
+  <details><summary>Swipe with friends</summary>
+    <p>Start a FaceTime call, choose <strong>SharePlay</strong> as the session type, then tap Start the show. Everyone on the call who has MovieMatch can join from the SharePlay banner.</p></details>
+  <details><summary>Play the match</summary>
+    <p>Open the match and tap <strong>Play on Plex</strong> or <strong>Play on Jellyfin</strong> to open the movie on your server.</p></details>
+
+  <h2>Your data</h2>
+  <details><summary>How do I delete my data?</summary>
+    <p>Disconnect your server in Settings, swipe to delete past screenings, or delete the app to remove everything. See the <a href="../privacy/">Privacy Policy</a>.</p></details>
+
+  <h2>Still stuck?</h2>
+  <p><a href="https://github.com/Ender1824/moviematch-site/issues">Open an issue</a> and describe what happened, including your iPhone model and iOS version. Please don't include your server address or token.</p>
+</main>
+<footer><a href="../">Home</a><a href="../privacy/">Privacy</a></footer>
+</body>
+</html>
