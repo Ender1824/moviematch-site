@@ -44,3 +44,6 @@ nav.top{position:relative;z-index:1;margin:0 0 28px;font-size:15px}
 nav.top a{color:var(--gold);text-decoration:none}
 footer a{color:#b9ae9b;margin:0 8px}
 .slogan{font:italic 600 clamp(18px,4.6vw,22px)/1.2 Georgia,"Times New Roman",serif;color:var(--cream);letter-spacing:.02em;margin:10px 0 2px;opacity:.92}
+.btn.download{display:flex;flex-direction:column;align-items:center;gap:2px;padding:14px 20px}
+.btn.download .dl-kicker{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;opacity:.75}
+.btn.download .dl-main{font-size:19px}
